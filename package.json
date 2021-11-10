@@ -5,7 +5,7 @@
      "main": "index.js",
      "scripts": {
           "test":"echo this is a test",
-          "start": "node app.js"
+          "start": "node start.js"
      },
 
      "author": "Nguyen,Kim,Khanh,QAnh",
