@@ -54,3 +54,6 @@ Chức năng của từng file trong webapp của tao như sau, mỗi đứa coi
 |start.js|File chính hay nói chung là file đầu vào, khi chạy file này bằng nodejs thì sẽ có trang web|
 |routes.js|File này là file quản lý các route, route là những cái như /home, /manage, /product, v.v. Nói chung cứ một cái "/<tên>" thì được tính là một route, file này là quản lý, xoá route, thêm route, v.v|
 |package.json|FIle này chứa các cấu hình cần thiết như là chương trình này cần thư viện gì, chương trình này tên gì, version bao nhiêu v.v|
+
+## Example
++ Đây là trang web mà tao đã upload thử trên trang heroku của tao, tụi bây có thể coi mẫu để xem => https://testappforkhanh.herokuapp.com/
