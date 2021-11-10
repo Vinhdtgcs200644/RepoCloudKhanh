@@ -1,0 +1,53 @@
+<style media="screen">
+     table, label{
+          margin-top : 40px;
+     }
+     label{
+          color:red;
+     }
+</style>
+
+<%- include("section/_header") %>
+
+     <h1>=== LIST OF EMPLOYEES ===</h1>
+
+     <% if(data.length<=0){ %>
+          <img src="/img/1579183685.png" alt="nothing is here" class="nothing">
+          <style media="screen">
+               .nothing{
+                    height:300px;
+                    width:300px;
+               }
+          </style>
+          <label>No employee is active :(</label>
+     <% } else{ %>
+          <table>
+               <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Address</th>
+               </thead>
+               <tbody>
+                    <% var index = 1 %>
+                    <% for(var item of data) { %>
+                         <tr>
+                              <td><%= index %></td>
+                              <td><%= item.fullname %></td>
+                              <td><%= item.Age %></td>
+                              <td><%= item.phone %></td>
+                              <td><%= item.email %></td>
+                              <td><%= item.Address %></td>
+                         </tr>
+
+                         <% var index = index + 1 %>
+
+                    <% } %>
+               </tbody>
+          </table>
+
+     <% } %>
+
+<%- include("section/_footer") %>

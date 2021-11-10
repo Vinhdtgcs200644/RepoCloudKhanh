@@ -1,0 +1,32 @@
+
+#sbar, #submit{
+     height: 40px;
+}
+#submit{
+     width: 200px;
+     background-color: black;
+     color : white;
+     border-radius: 50%;
+}
+#sbar{
+     width: 400px;
+     background-color: transparent;
+}
+#submit{
+     width: 100px;
+}
+.result{
+     display:flex;
+     flex-direction: row;
+}
+.info{
+     align-items: left;
+     text-align:left;
+     width: 500px;
+     padding:20px;
+     margin:10px;
+}
+img{
+     width: 300px;
+     height: 300px;
+}

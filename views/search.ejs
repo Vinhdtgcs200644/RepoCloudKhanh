@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="css/search.css">
+
+<%- include("section/_header") %>
+
+
+     <form action="search" method="post">
+          <label id="title">Search here :</label>
+          <style media="screen">
+               #title{
+                    font-size:30px;
+                    font-weight:bold;
+               }
+          </style>
+          <input type="text" name="search" value="" placeholder="Search here" id="sbar"><br><br><br><br>
+          <input type="submit" name="submit_bar" id="submit" value="SEARCH NOW"/>
+     </form>
+     <% if(result.length>0){ %>
+          <% if(result[0]==null){ %>
+               <div>
+                    <label class="huger">========== 404 >==========</label>
+               </div>
+               <div>
+                    <label class="huger">Sorry but we can't find your product :(</label>
+               </div>
+               <div>
+                    <label class="huger">========== 404 >==========</label>
+               </div>
+               <style media="screen">
+                    .huger{
+                         font-size :20px;
+                         color : red;
+                    }
+               </style>
+          <% } else{ %>
+               <div>
+                    <h1>YAY !!! we found one result :D</h1>
+               </div>
+               <div class="result">
+                    <div class="img">
+                         <img src="/img/<%= result[4] %>" alt="product image">
+                    </div>
+                    <div class="info">
+                         <div>
+                              <label>Title : </label><label><%= result[0] %></label>
+                         </div>
+                         <div>
+                              <label>Price : </label><label><%= result[1] %></label>
+                         </div>
+                         <div>
+                              <label>Made in : </label><label><%= result[2] %></label>
+                         </div>
+                         <div>
+                              <label>description : </label>
+                              <div>
+                                   <p><%= result[3] %></p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          <% } %>
+     <% } else{ %>
+     <label id="sss">FEEL FREE TO SEARCH ANYTHING</label>
+     <style media="screen">
+          #sss{
+               color:green;
+          }
+     </style>
+     <% } %>
+
+<%- include("section/_footer") %>

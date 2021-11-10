@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="css/prodview.css">
+<link rel="stylesheet" href="css/admin.css">
+
+<%- include("section/_header") %>
+
+<div class="middle">
+<form class="add" action="" method="post">
+     <div><label>Manage employees </label></div>
+     <hr>
+
+     <div>
+          <label>Name : </label><br>
+          <input class="iprod" name="fullname">
+     </div>
+
+     <div>
+          <label>Age : </label><br>
+          <input class="iprod" name="age">
+     </div>
+
+     <div>
+          <label>Phone number : </label><br>
+          <input class="iprod" name="phone">
+     </div>
+
+     <div>
+          <label>Email : </label><br>
+          <input class="iprod" name="email">
+     </div>
+
+     <div>
+          <label>Address : </label><br>
+          <input class="iprod" name="addr">
+     </div>
+     <input value="0" type="hidden" name="category">
+     <br>
+     <div><button type="submit">Add</button></div>
+     <div><label id="status-add"></label></div>
+
+</form>
+
+<br>
+
+<form class="update" action="" method="post">
+     <div><label>Update employees </label></div>
+     <hr>
+
+     <div>
+          <label>Name : </label>
+          <input class="iprod" name="fullnameN" id="fullname_"><br>
+          <input name="prove_" value="Check" type="submit"/><label id="status"></label>
+     </div>
+     <div id="update-section">
+          <div>
+               <label>Age : </label><br>
+               <input class="iprod" name="ageN" id="age_">
+          </div>
+
+          <div>
+               <label>Phone number : </label><br>
+               <input class="iprod" name="phoneN" id="phone_">
+          </div>
+
+          <div>
+               <label>Email : </label><br>
+               <input class="iprod" name="emailN" id="email_">
+          </div>
+
+          <div>
+               <label>Address : </label><br>
+               <input class="iprod" name="addressN" id="addr_">
+          </div>
+          <input value="1" type="hidden" name="category">
+          <br>
+          <div>
+               <input type="submit" name="prove_" value="Update"/>
+               <input type="submit" name="prove_" value="Delete"/>
+          </div>
+     </div>
+
+     <div><label id="status-update"></label></div>
+
+</form>
+<script>
+     var variable=<%= checkvar %>;
+
+     switch (variable) {
+          case 4:
+               document.getElementById("update-section").style.display="block";
+               document.getElementById("fullname_").value="<%= data[0] %>";
+               document.getElementById("age_").value="<%= data[2] %>";
+               document.getElementById("email_").value="<%= data[4] %>";
+               document.getElementById("addr_").value="<%= data[3] %>";
+               document.getElementById("phone_").value="<%= data[1] %>";
+               break;
+          case 5:
+               document.getElementById("status-add").innerHTML = "Successfully added";
+               document.getElementById("status-add").style.color = "green";
+               break;
+          case 6:
+               document.getElementById("status-update").innerHTML = "Successfully deleted";
+               document.getElementById("status-update").style.color = "green";
+               break;
+          case 7:
+               document.getElementById("status-update").innerHTML = "Successfully updated";
+               document.getElementById("status-update").style.color = "green";
+               break;
+          default:
+               break;
+     }
+</script>
+</div>
+<%- include("section/_footer") %>

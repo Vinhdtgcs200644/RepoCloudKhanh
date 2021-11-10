@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="css/cart.css">
+
+<%- include("section/_header") %>
+     <h2>=== YOUR CART ===</h2>
+     <% if(bills.length<=0){ %>
+          <img src="/img/1579183685.png" alt="nothing is here" class="nothing">
+          <style media="screen">
+               .nothing{
+                    height:300px;
+                    width:300px;
+               }
+          </style>
+          <label>No product found in cart.</label>
+     <% } else{ %>
+          <form action="" method="post">
+               <table>
+
+                    <thead>
+                         <th>Product Name</th>
+                         <th>Price</th>
+                    </thead>
+                    <tbody>
+                         <% var index = 1 %>
+                         <% for(var item of bills) { %>
+                         <tr>
+                              <td><%= item[0] %></td>
+                              <td><%= item[1] %>$</td>
+                         </tr>
+                         <% } %>
+                    </tbody>
+
+               </table>
+               <div>
+                    <label>Total:</label>
+                    <label><%= totalprice %>$</label>
+                    <input type="hidden" name="totalprice" value="<%= totalprice %>">
+               </div>
+               <button type="submit" name="submitbutton" value="1">Purchase</button>
+
+          </form>
+
+     <% } %>
+     <div>
+          <label id="status"><%= status %></label>
+     </div>
+
+<%- include("section/_footer") %>

@@ -1,0 +1,17 @@
+label{font-size: 20px;font-family: Cursive;
+
+     width: 400px;
+     text-align: center;
+     margin : auto;
+}
+img{
+     width:500px;height:auto;
+
+}
+
+#flexhere{
+     display:flex;
+}
+.intro{
+     width: 600px;
+}

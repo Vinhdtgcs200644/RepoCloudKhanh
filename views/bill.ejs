@@ -1,0 +1,38 @@
+<%- include("section/_header") %>
+
+     <h2>=== BILLS HISTORY ===</h2>
+     <% if(data.length<=0){ %>
+          <img src="/img/1579183685.png" alt="nothing is here" class="nothing">
+          <style media="screen">
+               .nothing{
+                    height:300px;
+                    width:300px;
+               }
+          </style>
+          <label>No bill has been made :(</label>
+
+     <% } else{ %>
+          <table>
+
+               <thead>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Buyer</th>
+                    <th>Date</th>
+               </thead>
+               <tbody>
+                    <% for(var item of data) { %>
+                    <tr>
+                         <td><%= item.title %></td>
+                         <td><%= item.price %>$</td>
+                         <td><%= item.buyer %></td>
+                         <td><%= item.date %></td>
+                    </tr>
+                    <% } %>
+               </tbody>
+
+          </table>
+     <% } %>
+
+
+<%- include("section/_footer") %>

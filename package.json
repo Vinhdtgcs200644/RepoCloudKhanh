@@ -1,0 +1,22 @@
+{
+     "name": "Cloud project 1.0",
+     "version": "1.0.0",
+     "description": "Cloud web application of our team",
+     "main": "index.js",
+     "scripts": {
+          "test":"echo this is a test",
+          "start": "node app.js"
+     },
+
+     "author": "Nguyen,Kim,Khanh,QAnh",
+     "license": "MIT license",
+
+     "dependencies": {
+          "express": "^4.17.1",
+          "mongoose": "^6.0.12",
+          "ejs": "^3.1.6",
+          "path": "^0.12.7",
+          "multer": "^1.4.3",
+          "formidable": "^2.0.1"
+     }
+}
