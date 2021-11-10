@@ -22,8 +22,8 @@ git push
 ---
 
 Chức năng của từng file trong webapp của tao như sau, mỗi đứa coi rồi tự phân ra xem thằng nào sẽ quản lý khúc nào và vân vân.
-| Files |Purpose|
-| ------ || ------ |
+| File | Purposes |
+| ------ | ------ |
 |apps/admin.js|File này chứa các chức năng cho /manage hay nói chung là chức năng liên quan tới nhân viên ( thêm, bớt, xoá ) nhân viên, v.v|
 |apps/cart.js|FIle này chứa các chức năng cho /cart hay nói chung là chức năng add product vào trong cart mua hàng|
 |apps/database.js|File này chứa chức năng kết nối tới cơ sở dữ liệu ( database ) của mongodb atlas|
